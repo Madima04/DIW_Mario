@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,12 +9,58 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
+    <h1>Cumpleaños</h1>
     <form>
-        <label for="name">Nombre:</label>
-        <input id="name" type="text">
-        <label for="Contraseña">Contraseña:</label>
-        <input id="Contraseña" type="password">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text">
+        <br><br>
+        <label for="apellidos">Apellidos:</label>
+        <input id="apellidos" type="text">
+        <br><br>
+        <label for="edad">Edad:</label>
+        <input id="edad" type="number">
+        <br><br>
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input id="nacimiento" type="date" min="1" pattern="^[0-9]+">
+        <br><br>
+        <fieldset>
+            <legend>Seleciona un postre</legend>
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked />
+                <label for="huey">Arroz con leche</label>
+            </div>
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey" />
+                <label for="dewey">Mil hojas</label>
+            </div>
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie" />
+                <label for="louie">Mousse de yogur con frutos rojos</label>
+            </div>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Elije los dias de fiesta en los que puedas asistir</legend>
+            <div>
+                <input type="checkbox" id="dia1" name="dia1" value="Viernes">
+                <label for="dia1">Viernes</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="dia2" name="dia2" value="Sabado">
+                <label for="dia2">Sabado</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="dia3" name="dia3" value="Domingo">
+                <label for="dia3">Domingo</label><br>
+            </div>
+        </fieldset>
+        <p>Envia un mensaje al cumpleañero</p>
+        <textarea rows="15" cols="150"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar" />
     </form>
 </body>
+
 </html>
