@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center; 
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+.green {
+    background-color: #ccffcc;
+}
+
+.yellow {
+    background-color: #ffffcc;
+}
+
+.orange {
+    background-color: #ffcc99;
+}
+
+.pink {
+    background-color: #ffcccc;
+}
+
+.brown {
+    background-color: #ffcc66;
+}
+
+.break {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}

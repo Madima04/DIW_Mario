@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario</title>
+    <title>Horario de Clases</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <table>
-        <caption>Horario</caption>
         <thead>
             <tr>
-                <th scope="col">Hora</th>
-                <th scope="col">Lunes</th>
-                <th scope="col">Martes</th>
-                <th scope="col">Miércoles</th>
-                <th scope="col">Jueves</th>
-                <th scope="col">Viernes</th>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">16:00 - 16:50</th>
-                <td class="DiseñodeInterfacesWeb" rowspan="2">Diseño de Interfaces Web</td>
-                <td class="DespliegueWebenEntornoServidor">Despliegue Web en Entorno Servidor</td>
-                <td class="DesarrolloWebenEntornoCliente" rowspan="2">Desarrollo Web en Entorno Cliente</td>
-                <td class="DiseñodeInterfacesWeb" rowspan="2">Diseño de Interfaces Web</td>
-                <td class="DesplieguedeAplicacionesWeb" rowspan="2">Despliegue de Aplicaciones Web</td>
+                <td>16:00 - 16:50</td>
+                <td class="green">Diseño de Interfaces Web; Emilio</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="orange">Desarrollo Web En Entorno Cliente;</td>
+                <td class="green">Diseño de Interfaces Web; Emilio</td>
+                <td class="pink">Despliegue de Aplicaciones Web; Yolanda</td>
             </tr>
             <tr>
-                <th scope="row">16:55 - 17:45</th>
-                <td class="DiseñodeInterfacesWeb">Diseño de Interfaces Web</td>
+                <td>16:55 - 17:45</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="green">Diseño de Interfaces Web; Emilio</td>
+                <td class="orange">Desarrollo Web En Entorno Cliente;</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="green">Diseño de Interfaces Web; Emilio</td>
             </tr>
             <tr>
-                <th scope="row">17:50 - 18:40</th>
-                <td class="DespliegueWebenEntornoServidor" rowspan="2">Despliegue Web en Entorno Servidor</td>
-                <td class="DesplieguedeAplicacionesWeb" rowspan="2">Despliegue de Aplicaciones Web</td>
-                <td class="DesplieguedeAplicacionesWeb" rowspan="2">Despliegue de Aplicaciones Web</td>
-                <td class="DespliegueWebenEntornoServidor" rowspan="2">Despliegue Web en Entorno Servidor</td>
-                <td class="DiseñodeInterfacesWeb" rowspan="2">Diseño de Interfaces Web</td>
+                <td>17:50 - 18:40</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="pink">Despliegue de Aplicaciones Web; Yolanda</td>
+                <td class="pink">Despliegue de Aplicaciones Web; Yolanda</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="pink">Despliegue de Aplicaciones Web; Yolanda</td>
             </tr>
             <tr>
-                <td colspan="5">Recreo</td>
+                <td colspan="6" class="break">Recreo</td>
             </tr>
             <tr>
-                <th scope="row">19:05 - 19:55</th>
-                <td class="DespliegueWebenEntornoServidor" rowspan="2">Despliegue Web en Entorno Servidor</td>
-                <td class="DesarrolloWebenEntornoCliente">Desarrollo Web en Entorno Cliente</td>
-                <td class="DesplieguedeAplicacionesWeb">Despliegue de Aplicaciones Web</td>
-                <td class="DespliegueWebenEntornoServidor" rowspan="3">Despliegue Web en Entorno Servidor</td>
-                <td class="DiseñodeInterfacesWeb" rowspan="2">Diseño de Interfaces Web</td>
+                <td>19:05 - 19:55</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="orange">Desarrollo Web En Entorno Cliente;</td>
+                <td class="pink">Despliegue de Aplicaciones Web; Yolanda</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="green">Diseño de Interfaces Web; Emilio</td>
             </tr>
             <tr>
-                <th scope="row">20:00 - 20:50</th>
-                <td class="DesarrolloWebenEntornoCliente">Desarrollo Web en Entorno Cliente</td>
-                <td class="EmpresaeIniciativaEmprendedora" rowspan="2">Empresa e Iniciativa Emprendedora</td>
+                <td>20:00 - 20:50</td>
+                <td class="orange">Desarrollo Web En Entorno Cliente;</td>
+                <td class="brown">Empresa e Iniciativa Emprendedora</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="brown">Empresa e Iniciativa Emprendedora</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
             </tr>
             <tr>
-                <th scope="row">20:55 - 21:45</th>
-                <td class="DesarrolloWebenEntornoCliente">Desarrollo Web en Entorno Cliente</td>
+                <td>20:55 - 21:45</td>
+                <td class="orange">Desarrollo Web En Entorno Cliente;</td>
+                <td class="brown">Empresa e Iniciativa Emprendedora</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
+                <td class="brown">Empresa e Iniciativa Emprendedora</td>
+                <td class="yellow">Despliegue Web En Entorno Servidor; Ana</td>
             </tr>
         </tbody>
     </table>
 </body>
-
 </html>
