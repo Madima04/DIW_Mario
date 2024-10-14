@@ -1,0 +1,53 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(formula-1/Formula\ 1.otf);
+}
+
+* {
+    font-size: 20px;
+    font-family: myFirstFont;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: aqua;
+}
+
+nav {
+    height: 5vh;
+}
+
+header {
+    height: 10vh;
+    background-color: blueviolet;
+}
+
+section {
+    height: 80vh;
+    background-color: cadetblue;
+}
+
+article {
+    height: 60vh;
+    width: 50%;
+    background-color: deeppink;
+    display: inline-block;
+}
+
+article+article {
+    height: 60vh;
+    width: 50%;
+    background-color: chartreuse;
+    float: left;
+}
+
+aside {
+    height: 20vh;
+    background-color: steelblue;
+}
+
+footer {
+    height: 5vh;
+    background-color: tomato;
+}
