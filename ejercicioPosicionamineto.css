@@ -29,22 +29,24 @@ section {
 }
 
 article {
-    height: 60vh;
-    width: 50%;
+    height: 80vh;
+    width: 40%;
     background-color: deeppink;
     display: inline-block;
 }
 
 article+article {
-    height: 60vh;
-    width: 50%;
+    height: 80vh;
+    width: 40%;
     background-color: chartreuse;
     float: left;
 }
 
 aside {
-    height: 20vh;
+    height: 80vh;
+    width: 20%;
     background-color: steelblue;
+    float: left;
 }
 
 footer {
