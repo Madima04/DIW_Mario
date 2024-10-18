@@ -1,0 +1,22 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}   
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul{
+    display: flex;
+
+}
