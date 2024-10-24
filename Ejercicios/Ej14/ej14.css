@@ -1,58 +1,93 @@
-body {
-    margin: 0;
-}
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
 
-h1 {
-    margin: 0;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-.wrapper.row1 {
-    background-color: dimgray;
-}
+    header,
+    section,
+    #container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
 
-.wrapper.row2 {
-    margin-bottom: 0;
-}
+    footer {
+        background-color: dimgray;
+        margin-top: auto;
+        text-align: center;
+    }
 
-header {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 960px;
-}
+    h1 {
+        margin: 0;
+    }
 
-header ul li {
-    padding-right: 20px;
-}
+    .wrapper.row1 {
+        background-color: dimgray;
+    }
 
-header ul {
-    display: flex;
-    padding: 1em;
-    background-color: black;
-}
+    .wrapper.row2 {
+        margin-bottom: 0;
+    }
 
-footer {
-    margin-bottom: 0;
-    margin: 0 auto;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 960px;
+        margin: 0 auto;
+    }
 
-section {
-    display: flex;
-    margin: 0 auto;
-}
+    header ul li {
+        padding-right: 20px;
+    }
 
-#container {
-    max-width: 960px;
-    margin: 0 auto;
-}
+    header ul {
+        display: flex;
+        padding: 1em;
+        background-color: black;
+    }
 
-footer {
-    background-color: dimgray;
-    margin-bottom: 0;
-    margin: 0 auto;
-}
+    section {
+        display: flex;
+        margin: 0 auto;
+        max-width: 960px;
+    }
 
-#copyright {
-    max-width: 960px;
-    margin: 0 auto;
-}
+    #copyright {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    #services {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    #services article {
+        width: calc(33.333%);
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    #services article img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    footer {
+        padding: 5px 0;
+    }
+
+    figure {
+        margin: 0;
+    }

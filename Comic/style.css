@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+.fila1,
+.fila2,
+.fila3 {
+    display: flex;
+    margin: 0;
+}
+
+.v1,
+.v2,
+.v3,
+.v4 {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+img {
+    height: 32vh;
+}
+
+.fila1 .v1:hover {
+    height: 50vh;
+    transition: height 2s;
+}
+
+.fila1 .v2:hover {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.fila1 .v3{
+    opacity: 1;
+    transition: all 4s;
+}
+
+.fila1 .v3:hover {
+    height: 50vh;
+    opacity: 0;
+}
+
+.fila3 {
+    position: relative;
+}
+
+.fila3 img {
+    position: absolute;
+    left: 0;
+    transition: left ease-in 3s;
+}
+
+.fila3 img:hover {
+    left: 600px;
+}
+
+.fila2 {
+    position: relative;
+}
+
+.fila2 .v2 {
+    left: 580px;
+    position: absolute;
+    top: 0;
+    transition: top ease-in 3s;
+}
+
+.fila2 .v2:hover {
+    top: 400px; 
+}
+
+/* curba deracha abajo*/
