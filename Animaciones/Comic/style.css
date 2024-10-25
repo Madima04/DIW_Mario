@@ -33,7 +33,7 @@ img {
     transition: opacity 0.2s;
 }
 
-.fila1 .v3{
+.fila1 .v3 {
     opacity: 1;
     transition: all 4s;
 }
@@ -69,7 +69,22 @@ img {
 }
 
 .fila2 .v2:hover {
-    top: 400px; 
+    top: 400px;
 }
 
-/* curba deracha abajo*/
+.fila2 {
+    position: relative;
+}
+
+.fila2 .v3 {
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: left 2s ease-in-out, top 2s ease-in;
+}
+
+
+.fila2 .v3:hover {
+    left: 400px;
+    top: 400px;
+}
