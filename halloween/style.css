@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background-image: url(img/fondo.jpg);
+    width: 1200px;
+    height: 820px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.fondofalso {
+    position: relative;
+    width: 209px;
+    left: 502px;
+    top: 265px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.fondofalso:hover {
+    opacity: 1;
+}
+
+.lunallena {
+    position: absolute;
+    width: 150px;
+    left: 485px;
+    top: 0;
+    opacity: 0;
+    transition: all 3s;
+}
+
+.fondofalso:hover~.lunallena {
+    top: 249px;
+    opacity: 1;
+}
+
+.hombrelobo {
+    position: absolute;
+    width: 122px;
+    left: 602px;
+    top: 660px;
+    transform: rotate(270deg);
+    opacity: 0;
+    transition: transform 6s, opacity 6s;
+}
+
+
+.fondofalso:hover~.hombrelobo {
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+.iluminarCalabaza {
+    width: 1200px;
+    height: 820px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <audio id="audio" src="audio/aullido.mp3"></audio>
+    <div class="fondo">
+        <img class="fondofalso" src="img/fondoFalso.png">
+        <img class="lunallena" src="img/lunallena.png">
+        <img class="hombrelobo" src="img/hombrelobo.png">
+        <img class="iluminarCalabaza" src="img/iluminarCalabaza.png">
+    </div>
+
+    <script>
+        document.querySelector('.fondofalso').addEventListener('mouseover', function () {
+            document.getElementById('audio').play();
+        });
+    </script>
+</body>
+
+</html>
