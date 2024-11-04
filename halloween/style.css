@@ -1,24 +1,26 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #4a2e6b;
 }
 
 .fondo {
     background-image: url(img/fondo.jpg);
-    width: 1200px;
-    height: 820px;
+    width: 1550px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
     background-position: center;
-    margin: 0 auto;
+    left: -100px;
 }
 
 .fondofalso {
     position: relative;
-    width: 209px;
-    left: 502px;
-    top: 265px;
+    width: 216px;
+    left: 599px;
+    z-index: 1;
+    top: 261px;
     opacity: 0;
     transition: all 0.3s;
 }
@@ -30,27 +32,27 @@ body {
 .lunallena {
     position: absolute;
     width: 150px;
-    left: 485px;
+    left: 672px;
+    z-index: 1;
     top: 0;
     opacity: 0;
-    transition: all 3s;
+    transition: all 6s;
 }
 
 .fondofalso:hover~.lunallena {
-    top: 249px;
+    transform: translateY(249px);
     opacity: 1;
 }
 
 .hombrelobo {
     position: absolute;
     width: 122px;
-    left: 602px;
+    left: 502px;
     top: 660px;
     transform: rotate(270deg);
     opacity: 0;
     transition: transform 6s, opacity 6s;
 }
-
 
 .fondofalso:hover~.hombrelobo {
     transform: rotate(360deg);
@@ -58,6 +60,119 @@ body {
 }
 
 .iluminarCalabaza {
-    width: 1200px;
-    height: 820px;
+    position: absolute;
+    width: 1206px;
+    height: 818px;
+    left: 179px;
+    top: 7px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 6s;
+}
+
+.iluminarCalabaza:hover {
+    opacity: 1;
+}
+
+.caraarbol {
+    width: 234px;
+    left: 1087px;
+    position: absolute;
+    top: 459px;
+    opacity: 0;
+    transition: opacity 6s;
+}
+
+.caraarbol:hover {
+    opacity: 1;
+}
+
+.et {
+    position: absolute;
+    width: 74px;
+    left: 702px;
+    top: 280px;
+    opacity: 0;
+    transition: transform 6s, opacity 1s;
+    transition-delay: 6s;
+}
+
+.fondofalso:hover~.et {
+    transform: translateX(249px);
+    opacity: 1;
+}
+
+.contenedor-humo {
+    position: absolute;
+    width: 595px;
+    height: 334px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.contenedor-humo:hover {
+    opacity: 1;
+}
+
+.contenedor-humo:hover .humo {
+    width: 100px;
+    opacity: 0;
+}
+
+.humo {
+    position: absolute;
+    width: 595px;
+    top: 0px;
+    left: 95px;
+    opacity: 1;
+    transform: rotateY(180deg);
+    transition: width 7s, opacity 7s;
+}
+
+
+
+.texto {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #fd7722;
+}
+
+h1,
+h3 {
+    margin: 0;
+}
+
+.tumba {
+    position: absolute;
+    left: 662px;
+    top: 693px;
+    width: 47px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+.cruz {
+    position: absolute;
+    left: 662px;
+    top: 693px;
+    width: 47px;
+    opacity: 0;
+    z-index: 2;
+    transform: rotate(0deg);
+    transition: all 0s;
+}
+
+.tumba:hover {
+    opacity: 1;
+}
+
+.tumba:hover~.cruz {
+    opacity: 1;
+    z-index: 3;
+    transform: rotate(180deg);
 }
