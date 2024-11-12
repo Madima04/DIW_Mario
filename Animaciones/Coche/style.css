@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+#fondo {
+    background-color: deepskyblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+#suelo {
+    background-color: darkgreen;
+    width: 100vw;
+    height: 30vh;
+}
+
+#coche {
+    position: absolute;
+    bottom: 28vh;
+    left: 0;
+    animation-name: moverCoche;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+#cocheimg {
+    width: 300px;
+}
+
+#muro {
+    position: absolute;
+    bottom: 18vh;
+    left: 100vh;
+}
+
+#boom {
+    position: absolute;
+    bottom: 27vh;
+    left: 93vh;
+    z-index: 2;
+    opacity: 0;
+    animation-name: explosion;
+    animation-delay: 1.83s;
+    animation-duration: 0.5s;
+}
+
+@keyframes moverCoche {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 40vw;
+    }
+}
+
+@keyframes explosion {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
