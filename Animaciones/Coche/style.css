@@ -1,3 +1,4 @@
+/*coche atraviesa un muro (humo y escombros) y se choca contra un edificioal aparecen llamas en el impacto sobre el idificio y subre algun desperfecto. sonido que interactua con la web. pajaros volando y aparecen diglet en la tiera de manera infinita */
 body {
     margin: 0;
 }
@@ -17,53 +18,185 @@ body {
     height: 30vh;
 }
 
-#coche {
+#bici {
     position: absolute;
-    bottom: 28vh;
-    left: 0;
-    animation-name: moverCoche;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    z-index: 1;
-}
-
-#cocheimg {
-    width: 300px;
-}
-
-#muro {
-    position: absolute;
-    bottom: 18vh;
-    left: 100vh;
-}
-
-#boom {
-    position: absolute;
-    bottom: 27vh;
-    left: 93vh;
+    bottom: 187px;
+    left: 45px;
     z-index: 2;
+    animation: bici;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#stonjourner {
+    position: absolute;
+    bottom: 614px;
+    left: 270px;
+}
+
+#stonjournerpata2 {
+    position: absolute;
+    z-index: 3;
+    rotate: calc(0deg);
+    animation-name: stonjournerpata2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#stonjournerpata1 {
+    position: absolute;
+    z-index: 2;
+    rotate: calc(0deg);
+    animation-name: stonjournerpata1;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#stonjournercabezaimg {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    animation-name: stonjournercabezaimg;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#biciimg {
+    width: 100px;
+}
+
+#centropokemonimg {
+    width: 342px;
+}
+
+#centropokemon {
+    position: absolute;
+    left: 1091px;
+    bottom: 151px;
+}
+
+#aerodactyl {
+    position: absolute;
+    left: 16px;
+    bottom: 808px;
+    animation-name: aerodactyl;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#aerodactylidaimg {
+    position: absolute;
+    opacity: 1;
+}
+
+#aerodactylvueltaimg {
+    position: absolute;
     opacity: 0;
-    animation-name: explosion;
-    animation-delay: 1.83s;
-    animation-duration: 0.5s;
 }
 
-@keyframes moverCoche {
-    from {
-        left: 0;
+#sol {
+    position: absolute;
+    left: 1136px;
+    top: 12px;
+
+}
+
+#solimg {
+    width: 182px;
+}
+
+#diglett {
+    position: absolute;
+    left: 178px;
+    bottom: 123px;
+}
+
+#diglettbaseimg {
+    position: absolute;
+    width: 100px;
+}
+
+#diglettcabezaimg {
+    position: absolute;
+    width: 100px;
+}
+
+@keyframes bici {
+    0% {
+        left: 45px;
     }
 
-    to {
-        left: 40vw;
+    40% {
+        left: 400px;
+    }
+
+    80% {
+        left: 500px
+    }
+
+    100% {
+        left: 1045px;
     }
 }
 
-@keyframes explosion {
-    from {
-        opacity: 0;
+@keyframes stonjournerpata1 {
+    0% {
+        rotate: calc(0deg);
     }
 
-    to {
-        opacity: 1;
+    80% {
+        rotate: calc(0deg);
     }
+
+    100% {
+        rotate: calc(280deg);
+    }
+}
+
+@keyframes stonjournerpata2 {
+    0% {
+        rotate: calc(0deg);
+    }
+
+    80% {
+        rotate: calc(0deg);
+    }
+
+    100% {
+        rotate: calc(90deg);
+    }
+}
+
+@keyframes stonjournercabezaimg {
+    0% {
+        top: 0px;
+    }
+
+    80% {
+        top: 0px;
+    }
+
+    100% {
+        top: 100px;
+    }
+}
+
+@keyframes aerodactyl {
+    0% {
+        left: 16px;
+    }
+
+    50% {
+        left: 1245px;
+    }
+
+    100% {
+        left: 16px;
+    }
+}
+
+@keyframes topo {
+    
 }

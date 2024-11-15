@@ -10,17 +10,40 @@
 
 <body>
     <div id="fondo">
-        <div id="coche">
-            <img id="cocheimg" src="coche.png">
+        <div id="sol">
+            <img id="solimg" src="img/sol.png">
         </div>
-        <div id="boom">
-            <img id="boomimg" src="explosion.gif">
+        <div id="aerodactyl">
+            <img id="aerodactylidaimg" src="img/aerodactylida.gif">
         </div>
-        <div id="muro">
-            <img id="muroimg" src="Muro.png">
+        <div id="stonjourner">
+            <img id="stonjournercabezaimg" src="img/stonjournercabeza.png">
+            <img id="stonjournerpata1" src="img/stonjournerpata1.png">
+            <img id="stonjournerpata2" src="img/stonjournerpata2.png">
         </div>
-        <div id="suelo"></div>
+        <div id="centropokemon">
+            <img id="centropokemonimg" src="img/centropokemon.png">
+        </div>
+        <div id="bici">
+            <img id="biciimg" src="img/bici.gif">
+        </div>
+        <div id="suelo">
+            <div id="diglett">
+                <img id="diglettbaseimg" src="img/diglettbase.png">
+                <img id="diglettcabezaimg" src="img/diglettcabeza.png">
+            </div>
+        </div>
     </div>
 </body>
+
+<script>
+    let aerodactyl = document.getElementById("aerodactylidaimg");
+    setInterval(() => {
+        aerodactyl.setAttribute("src", "img/aerodactylida.gif");
+        setTimeout(() => {
+            aerodactyl.setAttribute("src", "img/aerodactylvuelta.gif");
+        }, 2000);
+    }, 3900);
+</script>
 
 </html>
