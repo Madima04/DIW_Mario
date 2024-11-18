@@ -1,27 +1,31 @@
 /*coche atraviesa un muro (humo y escombros) y se choca contra un edificioal aparecen llamas en el impacto sobre el idificio y subre algun desperfecto. sonido que interactua con la web. pajaros volando y aparecen diglet en la tiera de manera infinita */
 body {
     margin: 0;
+    padding: 0;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #fondo {
-    background-color: deepskyblue;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-
+    position: relative;
 }
 
+
 #suelo {
-    background-color: darkgreen;
     width: 100vw;
     height: 30vh;
 }
 
 #bici {
     position: absolute;
-    bottom: 187px;
-    left: 45px;
+    bottom: 20vh;
+    left: 20vw;
     z-index: 2;
     animation: bici;
     animation-duration: 4s;
@@ -29,57 +33,68 @@ body {
     animation-fill-mode: forwards;
 }
 
-#stonjourner {
-    position: absolute;
-    bottom: 614px;
-    left: 270px;
-}
-
 #stonjournerpata2 {
     position: absolute;
     z-index: 3;
-    rotate: calc(0deg);
-    animation-name: stonjournerpata2;
+    animation-name: caerPata2;
     animation-duration: 4s;
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    width: 16vw;
+    left: 20vw;
+    bottom: 18vh;
+    transform-origin: 40%;
 }
 
 #stonjournerpata1 {
     position: absolute;
     z-index: 2;
-    rotate: calc(0deg);
-    animation-name: stonjournerpata1;
+    animation-name: caerPata1;
     animation-duration: 4s;
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    width: 16vw;
+    left: 20vw;
+    bottom: 18vh;
+    transform-origin: 50% 100%;
 }
 
 #stonjournercabezaimg {
     position: absolute;
     z-index: 1;
-    top: 0px;
+    top: 0;
     animation-name: stonjournercabezaimg;
     animation-duration: 4s;
     animation-fill-mode: forwards;
+    width: 16vw;
+    left: 20vw;
+    top: 50vh;
 }
 
 #biciimg {
-    width: 100px;
+    width: 6vw;
+
+    height: 10vh;
+    animation-name: golpe;
+    animation-duration: 1s;
+    animation-delay: 4s;
 }
 
 #centropokemonimg {
-    width: 342px;
+    width: 20vw;
 }
 
 #centropokemon {
     position: absolute;
-    left: 1091px;
-    bottom: 151px;
+    left: 75vw;
+    bottom: 15vh;
 }
 
 #aerodactyl {
     position: absolute;
-    left: 16px;
-    bottom: 808px;
+    left: 1vw;
+    bottom: 80vh;
+    width: 6vw;
     animation-name: aerodactyl;
     animation-timing-function: linear;
     animation-duration: 4s;
@@ -98,105 +113,346 @@ body {
 
 #sol {
     position: absolute;
-    left: 1136px;
-    top: 12px;
-
+    left: 80vw;
+    top: 5vh;
 }
 
 #solimg {
-    width: 182px;
+    width: 15vw;
+    animation: cambiarColor 10s infinite linear;
 }
 
-#diglett {
+#diglettbaseimg1,
+#diglettbaseimg2,
+#diglettbaseimg3 {
     position: absolute;
-    left: 178px;
-    bottom: 123px;
+    width: 5vw;
 }
 
-#diglettbaseimg {
+#diglettcabezaimg1,
+#diglettcabezaimg2,
+#diglettcabezaimg3 {
     position: absolute;
-    width: 100px;
+    width: 5vw;
 }
 
-#diglettcabezaimg {
+#diglettbaseimg1 {
+    left: 60vw;
+    bottom: 15vh;
+}
+
+#diglettcabezaimg1 {
+    left: 60vw;
+    bottom: 15vh;
+    animation-name: topo1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#diglettbaseimg2 {
+    left: 45vw;
+    bottom: 5vh;
+}
+
+#diglettcabezaimg2 {
+    left: 45vw;
+    bottom: 5vh;
+    animation-name: topo3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+#diglettbaseimg3 {
+    left: 5vw;
+    bottom: 5vh;
+}
+
+#diglettcabezaimg3 {
+    left: 5vw;
+    bottom: 5vh;
+    animation-name: topo3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.7s;
+}
+
+#boom {
     position: absolute;
-    width: 100px;
+    width: 20vw;
+    left: 63vw;
+    z-index: 4;
+    bottom: 10vh;
+    opacity: 0;
+    animation-name: boom;
+    animation-duration: 1s;
+    animation-delay: 4s;
+}
+
+#fuego {
+    position: absolute;
+    width: 20vw;
+    left: 63vw;
+    z-index: 5;
+    opacity: 0;
+    bottom: 15vh;
+    animation-name: fuego;
+    animation-duration: 4s;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+}
+
+#lapras {
+    position: absolute;
+    width: 10vw;
+    bottom: 45vh;
+    left: -10vw;
+}
+
+#lluvia {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    opacity: 0;
+}
+
+#botton {
+    position: absolute;
+    bottom: 90vh;
+    left: 45vw;
+    z-index: 10;
+}
+
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 @keyframes bici {
     0% {
-        left: 45px;
+        left: 5vw;
     }
 
     40% {
-        left: 400px;
+        left: 20vw;
     }
 
     80% {
-        left: 500px
+        left: 25vw;
+    }
+
+    95% {
+        left: 72vw;
+    }
+
+    99% {
+        transform: rotate(0deg);
     }
 
     100% {
-        left: 1045px;
+        left: 70vw;
+        transform: rotate(180deg);
     }
 }
 
-@keyframes stonjournerpata1 {
+@keyframes caerPata1 {
     0% {
-        rotate: calc(0deg);
+        transform: rotate(0deg);
     }
 
     80% {
-        rotate: calc(0deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        rotate: calc(280deg);
+        transform: rotate(90deg);
     }
 }
 
-@keyframes stonjournerpata2 {
+@keyframes caerPata2 {
     0% {
-        rotate: calc(0deg);
+        transform: rotate(0deg);
     }
 
-    80% {
-        rotate: calc(0deg);
+    70% {
+        transform: rotate(0deg);
     }
 
     100% {
-        rotate: calc(90deg);
+        transform: rotate(90deg);
     }
 }
 
 @keyframes stonjournercabezaimg {
     0% {
-        top: 0px;
+        top: 53vh;
     }
 
     80% {
-        top: 0px;
+        top: 53vh;
     }
 
     100% {
-        top: 100px;
+        top: 60vh;
     }
 }
 
 @keyframes aerodactyl {
     0% {
-        left: 16px;
+        left: 1vw;
     }
 
     50% {
-        left: 1245px;
+        left: 90vw;
     }
 
     100% {
-        left: 16px;
+        left: 1vw;
     }
 }
 
-@keyframes topo {
-    
+@keyframes topo1 {
+    0% {
+        bottom: 23vh;
+    }
+
+    50% {
+        bottom: 15vh;
+    }
+
+    100% {
+        bottom: 23vh;
+    }
+}
+
+@keyframes topo3 {
+    0% {
+        bottom: 13vh;
+    }
+
+    50% {
+        bottom: 5vh;
+    }
+
+    100% {
+        bottom: 13vh;
+    }
+}
+
+@keyframes cambiarColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    25% {
+        filter: hue-rotate(90deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    75% {
+        filter: hue-rotate(270deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes golpe {
+    0% {
+        width: 6vw;
+    }
+
+    50% {
+        width: 3vw;
+    }
+
+    100% {
+        width: 6vw;
+    }
+}
+
+@keyframes boom {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes fuego {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lapras {
+
+    0% {
+        left: -10vw;
+    }
+
+    10% {
+        left: 45vw;
+    }
+
+    90% {
+        left: 45vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+@keyframes lluvia {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fuegoDesvanecer {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

@@ -10,28 +10,33 @@
 
 <body>
     <div id="fondo">
+        <div id="botton"><button>Llamar a Lapras</button></div>
         <div id="sol">
             <img id="solimg" src="img/sol.png">
         </div>
         <div id="aerodactyl">
             <img id="aerodactylidaimg" src="img/aerodactylida.gif">
         </div>
-        <div id="stonjourner">
-            <img id="stonjournercabezaimg" src="img/stonjournercabeza.png">
-            <img id="stonjournerpata1" src="img/stonjournerpata1.png">
-            <img id="stonjournerpata2" src="img/stonjournerpata2.png">
-        </div>
+        <img id="lluvia" src="img/lluvia.gif">
+        <img id="stonjournercabezaimg" src="img/stonjournercabeza.png">
+        <img id="stonjournerpata1" src="img/stonjournerpata1.png">
+        <img id="stonjournerpata2" src="img/stonjournerpata2.png">
+        <img id="lapras" src="img/lapras.png">
         <div id="centropokemon">
             <img id="centropokemonimg" src="img/centropokemon.png">
         </div>
+        <img id="fuego" src="img/fuego.gif">
+        <img id="boom" src="img/explosion.gif">
         <div id="bici">
             <img id="biciimg" src="img/bici.gif">
         </div>
         <div id="suelo">
-            <div id="diglett">
-                <img id="diglettbaseimg" src="img/diglettbase.png">
-                <img id="diglettcabezaimg" src="img/diglettcabeza.png">
-            </div>
+            <img id="diglettcabezaimg1" src="img/diglettcabeza.png">
+            <img id="diglettbaseimg1" src="img/diglettbase.png">
+            <img id="diglettcabezaimg2" src="img/diglettcabeza.png">
+            <img id="diglettbaseimg2" src="img/diglettbase.png">
+            <img id="diglettcabezaimg3" src="img/diglettcabeza.png">
+            <img id="diglettbaseimg3" src="img/diglettbase.png">
         </div>
     </div>
 </body>
@@ -44,6 +49,37 @@
             aerodactyl.setAttribute("src", "img/aerodactylvuelta.gif");
         }, 2000);
     }, 3900);
+
+    let botonLapras = document.querySelector("button");
+    botonLapras.addEventListener('click', () => {
+        let lapras = document.getElementById("lapras");
+        let lluvia = document.getElementById("lluvia");
+        let fuego = document.getElementById("fuego");
+
+        lapras.style.animationName = "lapras";
+        lapras.style.animationDuration = "4s";
+        lapras.style.animationFillMode = "forwards";
+
+        lluvia.style.animationName = "lluvia";
+        lluvia.style.animationDuration = "6s";
+        lluvia.style.animationDelay = "1.5s";
+
+        fuego.style.animationName = "fuegoDesvanecer";
+        fuego.style.animationDuration = "5s";
+        fuego.style.animationDelay = "0s";
+    })
+
+    const boomSound = new Audio('sounds/explosion.mp3');
+    const birdsSound = new Audio('sounds/birds.mp3');
+
+    document.getElementById('biciimg').addEventListener('animationstart', () => {
+        boomSound.play();
+    });
+
+    document.getElementById('fuego').addEventListener('animationstart', () => {
+        birdsSound.play();
+    });
+
 </script>
 
 </html>
