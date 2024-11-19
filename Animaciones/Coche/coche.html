@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <audio src="sounds/insulto.mp3"></audio>
     <div id="fondo">
         <div id="botton"><button>Llamar a Lapras</button></div>
         <div id="sol">
@@ -69,17 +70,19 @@
         fuego.style.animationDelay = "0s";
     })
 
-    const boomSound = new Audio('sounds/explosion.mp3');
-    const birdsSound = new Audio('sounds/birds.mp3');
+    let lluvia = new Audio('sounds/lluvia.mp3');
+    let insulto = new Audio('sounds/insulto.mp3');
+    let fondo = new Audio('sounds/juego.mp3')
 
-    document.getElementById('biciimg').addEventListener('animationstart', () => {
-        boomSound.play();
+    document.getElementById('lluvia').addEventListener('animationstart', () => {
+        lluvia.play();
     });
 
-    document.getElementById('fuego').addEventListener('animationstart', () => {
-        birdsSound.play();
-    });
+    setTimeout(() => {
+        insulto.play();
+    }, 3500);
 
+    fondo.play();
 </script>
 
 </html>
