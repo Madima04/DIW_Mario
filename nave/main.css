@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nave {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/naveEspacial.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+.fondo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/fondo.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    animation-timing-function: linear;
+}
+
+.panel {
+    position: absolute;
+    left: 47.5vw;
+    top: 89vh;
+    z-index: 11;
+    width: 6vw;
+}
+
+.panel {
+    position: absolute;
+    left: 47.5vw;
+    top: 89vh;
+    z-index: 11;
+    width: 6vw;
+}
+
+@keyframes salto {
+    0% {
+        background-size: 120%;
+    }
+
+    15% {
+        background-size: 220%;
+    }
+
+    25% {
+        background-size: 520%;
+    }
+
+    30% {
+        background-size: 1120%;
+    }
+
+    50% {
+        background-size: 2120%;
+    }
+}
