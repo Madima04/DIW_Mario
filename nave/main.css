@@ -16,14 +16,20 @@ body {
 
 .fondo {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    left: 10vw;
+    width: 200vw;
+    height: 200vw;
     background-image: url(img/fondo.png);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
+    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+    animation-name: move;
+    animation-duration: 60s;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 .panel {
@@ -47,19 +53,41 @@ body {
         background-size: 120%;
     }
 
-    15% {
+    10% {
         background-size: 220%;
     }
 
-    25% {
+    15% {
         background-size: 520%;
     }
 
-    30% {
+    18% {
         background-size: 1120%;
     }
 
-    50% {
+    20% {
         background-size: 2120%;
+    }
+
+    99% {
+        background-size: 2120%;
+    }
+
+    100% {
+        background-size: 120%;
+    }
+}
+
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+
+    50% {
+        offset-distance: 100%;
+    }
+
+    100% {
+        offset-distance: 0%;
     }
 }

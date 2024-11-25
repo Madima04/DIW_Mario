@@ -42,13 +42,18 @@
             sans.style.transform = "rotateX(45deg)";
             ppanel.append(sans);
             fondo.style.animationName = "salto";
-            fondo.style.animationDuration = "0.5s";
-            fondo.style.animation
+            fondo.style.animationDuration = "3s";
+            fondo.style.animationIterationCount = "1";
+            fondo.style.animationTimingFunction = "linear";
             panel.src = "img/panel/panelCentral2.png";
         }, 3000);
         setTimeout(() => {
             panel.src = "img/panel/panelCentral.png";
-            sans.style.transform = "rotateX(90deg)";
+            sans.style.display = "none";
+            fondo.style.animationName = "move";
+            fondo.style.animationDuration = "60s";
+            fondo.style.animationIterationCount = "infinite";
+            fondo.style.backgroundImage = "url(img/fondo2.jpg)";
         }, 3500);
     });
 </script>
