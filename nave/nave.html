@@ -13,6 +13,8 @@
 <body>
     <div>
         <div class="fondo"></div>
+        <img class="tierra" src="img/tierra.png">
+        <img class="saturno" src="img/saturno.png">
         <div class="nave"></div>
         <div class="ppanel"><img class="panel" src="img/panel/panelCentral.png"></div>
     </div>
@@ -23,6 +25,7 @@
     let ppanel = document.querySelector(".ppanel");
     let fondo = document.querySelector(".fondo");
     let sans = document.createElement("img");
+    fondo.style.backgroundImage = 'url("img/fondo.png")';
     panel.addEventListener("click", () => {
         panel.src = "img/panel/panelCentral3.png"
         setTimeout(() => {
@@ -49,11 +52,15 @@
         }, 3000);
         setTimeout(() => {
             panel.src = "img/panel/panelCentral.png";
-            sans.style.display = "none";
+            sans.style.transform = "rotateX(90deg)";
             fondo.style.animationName = "move";
             fondo.style.animationDuration = "60s";
             fondo.style.animationIterationCount = "infinite";
-            fondo.style.backgroundImage = "url(img/fondo2.jpg)";
+            if (fondo.style.backgroundImage == 'url("img/fondo.png")') {
+                fondo.style.backgroundImage = 'url("img/fondo2.jpg")';
+            }else {
+                fondo.style.backgroundImage = 'url("img/fondo.png")';
+            }
         }, 3500);
     });
 </script>

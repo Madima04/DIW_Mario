@@ -14,12 +14,44 @@ body {
     z-index: 10;
 }
 
+.tierra {
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    width: 10vw;
+    background-image: url(img/tierra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+    animation-name: move;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.saturno{
+    position: absolute;
+    left: 60vw;
+    width: 20vw;
+    background-image: url(img/tierra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+    animation-name: move;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 .fondo {
     position: absolute;
-    left: 10vw;
+    left: 20vw;
     width: 200vw;
     height: 200vw;
-    background-image: url(img/fondo.png);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
