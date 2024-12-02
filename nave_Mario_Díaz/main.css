@@ -1,0 +1,162 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.nave {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/naveEspacial.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+
+}
+
+.planeta {
+    width: 10vw;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+    animation-name: move;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.tierra {
+    top: 20vh;
+    left: 20vw;
+    background-image: url(img/tierra.jpg);
+}
+
+.saturno {
+    left: 60vw;
+    width: 20vw;
+    background-image: url(img/tierra.jpg);
+}
+
+.voltor {
+    width: 30vw;
+    top: 20vh;
+    left: 20vw;
+    background-image: url(img/tierra.jpg);
+    display: none;
+}
+
+.halconMilenario {
+    position: absolute;
+    width: 10vw;
+    left: 110vw;
+    top: 45vh;
+    z-index: 2;
+}
+
+.tieFighter {
+    position: absolute;
+    width: 10vw;
+    left: 110vw;
+    top: 50vh;
+    z-index: 2;
+}
+
+.disparos {
+    position: absolute;
+    top: 50vh;
+    width: 10vw;
+    left: 110vw;
+    z-index: 2;
+}
+
+.fondo {
+    position: absolute;
+    left: 20vw;
+    width: 200vw;
+    height: 200vw;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+    animation-name: move;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.panel {
+    position: absolute;
+    left: 47.5vw;
+    top: 89vh;
+    z-index: 11;
+    width: 6vw;
+}
+
+.panel {
+    position: absolute;
+    left: 47.5vw;
+    top: 89vh;
+    z-index: 11;
+    width: 6vw;
+}
+
+@keyframes salto {
+    0% {
+        background-size: 120%;
+    }
+
+    10% {
+        background-size: 220%;
+    }
+
+    15% {
+        background-size: 520%;
+    }
+
+    18% {
+        background-size: 1120%;
+    }
+
+    20% {
+        background-size: 2120%;
+    }
+
+    99% {
+        background-size: 2120%;
+    }
+
+    100% {
+        background-size: 120%;
+    }
+}
+
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+
+    50% {
+        offset-distance: 100%;
+    }
+
+    100% {
+        offset-distance: 0%;
+    }
+}
+
+@keyframes volar {
+    0% {
+        left: 110vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}

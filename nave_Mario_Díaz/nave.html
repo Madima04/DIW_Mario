@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div>
+        <div class="fondo"></div>
+        <img class="planeta tierra" src="img/tierra.png">
+        <img class="planeta saturno" src="img/saturno.png">
+        <img class="planeta voltor" src="img/voltord.png">
+        <img class="halconMilenario" src="img/halconMilenario.png">
+        <img class="disparos" src="img/disparos.gif">
+        <img class="tieFighter" src="img/tieFighter.png">
+        <div class="nave"></div>
+        <div class="ppanel"><img class="panel" src="img/panel/panelCentral.png"></div>
+    </div>
+</body>
+
+<script>
+    let panel = document.querySelector(".panel");
+    let ppanel = document.querySelector(".ppanel");
+    let fondo = document.querySelector(".fondo");
+    let sans = document.createElement("img");
+    let saturno = document.querySelector(".saturno");
+    let tierra = document.querySelector(".tierra");
+    let voltor = document.querySelector(".voltor");
+    let halconMilenario = document.querySelector(".halconMilenario")
+    let tieFighter = document.querySelector(".tieFighter")
+    let disparos = document.querySelector(".disparos")
+    let marchaImperial = new Audio('sounds/Imperial march Star Wars. La guerra de las galaxias.mp3');
+    let disparosSonido = new Audio('sounds/[EFECTO DE SONIDO] DISPARO Naves X WING Star Wars  Sound Effect SHOOTING Ships X WING Star Wars.mp3');
+    fondo.style.backgroundImage = 'url("img/fondo.png")';
+    panel.addEventListener("click", () => {
+        panel.src = "img/panel/panelCentral3.png"
+        setTimeout(() => {
+            panel.src = "img/panel/panelCentral2.png";
+        }, 1000);
+        setTimeout(() => {
+            panel.src = "img/panel/panelCentral1.png";
+        }, 2000);
+        setTimeout(() => {
+            panel.src = "img/panel/panelCentral0.png";
+            sans.src = "img/sans.gif";
+            sans.className = "panel";
+            sans.style.zIndex = 12;
+            sans.style.width = "3vw";
+            sans.style.left = "49vw";
+            sans.style.top = "89.3vh";
+            sans.style.transform = "rotateX(45deg)";
+            ppanel.append(sans);
+            fondo.style.animationName = "salto";
+            fondo.style.animationDuration = "3s";
+            fondo.style.animationIterationCount = "1";
+            fondo.style.animationTimingFunction = "linear";
+            panel.src = "img/panel/panelCentral2.png";
+        }, 3000);
+        setTimeout(() => {
+            panel.src = "img/panel/panelCentral.png";
+            sans.style.transform = "rotateX(90deg)";
+            fondo.style.animationName = "move";
+            fondo.style.animationDuration = "60s";
+            fondo.style.animationIterationCount = "infinite";
+            if (fondo.style.backgroundImage == 'url("img/fondo.png")') {
+                fondo.style.backgroundImage = 'url("img/fondo2.jpg")';
+                saturno.style.display = "none";
+                tierra.style.display = "none";
+                voltor.style.display = "block";
+                marchaImperial.play();
+            } else {
+                fondo.style.backgroundImage = 'url("img/fondo.png")';
+                saturno.style.display = "block";
+                tierra.style.display = "block";
+                voltor.style.display = "none";
+                marchaImperial.pause();
+                marchaImperial.currentTime = 0;
+            }
+        }, 3500);
+        setTimeout(() => {
+            halconMilenario.style.animationName = "volar";
+            halconMilenario.style.animationDuration = "3s";
+            halconMilenario.style.animationTimingFunction = "linear";
+        }, 4000);
+        setTimeout(() => {
+            disparos.style.animationName = "volar";
+            disparos.style.animationDuration = "3s";
+            disparos.style.animationTimingFunction = "linear";
+            if (fondo.style.backgroundImage == 'url("img/fondo2.jpg")') {
+                disparosSonido.play();
+            }
+
+        }, 4250);
+        setTimeout(() => {
+            tieFighter.style.animationName = "volar";
+            tieFighter.style.animationDuration = "3s";
+            tieFighter.style.animationTimingFunction = "linear";
+        }, 4500);
+        setTimeout(() => {
+            disparosSonido.pause();
+            disparosSonido.currentTime = 0;
+
+        }, 7250);
+    });
+</script>
+
+</html>
