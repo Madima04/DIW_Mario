@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .nave {
@@ -14,12 +15,8 @@ body {
     z-index: 10;
 }
 
-.tierra {
+.planeta {
     position: absolute;
-    top: 20vh;
-    left: 20vw;
-    width: 10vw;
-    background-image: url(img/tierra.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,20 +28,40 @@ body {
     animation-iteration-count: infinite;
 }
 
-.saturno{
-    position: absolute;
+.tierra {
+    top: 20vh;
+    left: 20vw;
+    width: 10vw;
+    background-image: url(img/tierra.jpg);
+}
+
+.saturno {
     left: 60vw;
     width: 20vw;
     background-image: url(img/tierra.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 2;
-    offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
-    animation-name: move;
-    animation-duration: 60s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+}
+
+.estrellaDeLaMuerte {
+    top: 20vh;
+    left: 20vw;
+    width: 30vw;
+    background-image: url(img/estrellaDeLaMuerte.jpg);
+}
+
+.halconMilenario {
+    position: absolute;
+    z-index: 3;
+    width: 20vw;
+    left: 120vw;
+    top: 60vh;
+}
+
+.TIESilencer {
+    position: absolute;
+    z-index: 3;
+    width: 20vw;
+    left: 120vw;
+    top: 60vh;
 }
 
 .fondo {
@@ -70,14 +87,8 @@ body {
     top: 89vh;
     z-index: 11;
     width: 6vw;
-}
-
-.panel {
-    position: absolute;
-    left: 47.5vw;
-    top: 89vh;
-    z-index: 11;
-    width: 6vw;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 70px 10px rgba(244, 255, 25, 0.8);
 }
 
 @keyframes salto {
@@ -121,5 +132,15 @@ body {
 
     100% {
         offset-distance: 0%;
+    }
+}
+
+@keyframes volar {
+    0% {
+        left: 120vw;
+    }
+
+    100% {
+        left: -20vw;
     }
 }

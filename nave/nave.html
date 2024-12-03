@@ -13,18 +13,29 @@
 <body>
     <div>
         <div class="fondo"></div>
-        <img class="tierra" src="img/tierra.png">
-        <img class="saturno" src="img/saturno.png">
+        <img class="planeta tierra" src="img/tierra.png">
+        <img class="planeta saturno" src="img/saturno.png">
+        <img class="halconMilenario" src="img/halconMilenario.png">
+        <img class="TIESilencer" src="img/TIE_Silencer.png">
+        <img class="planeta estrellaDeLaMuerte" src="img/estrellaDeLaMuerte.jpg">
         <div class="nave"></div>
         <div class="ppanel"><img class="panel" src="img/panel/panelCentral.png"></div>
     </div>
 </body>
 
 <script>
+    let tierra = document.querySelector(".tierra");
+    let saturno = document.querySelector(".saturno");
     let panel = document.querySelector(".panel");
     let ppanel = document.querySelector(".ppanel");
     let fondo = document.querySelector(".fondo");
     let sans = document.createElement("img");
+    let halconMilenario = document.querySelector(".halconMilenario");
+    let TIE_Silencer = document.querySelector(".TIE_Silencer");
+    let estrellaDeLaMuerte = document.querySelector(".estrellaDeLaMuerte");
+    let marchaImperial = new Audio("audio/Star Wars- The Imperial March (Darth Vader's Theme).mp3");
+
+    estrellaDeLaMuerte.style.display = "none";
     fondo.style.backgroundImage = 'url("img/fondo.png")';
     panel.addEventListener("click", () => {
         panel.src = "img/panel/panelCentral3.png"
@@ -54,14 +65,37 @@
             panel.src = "img/panel/panelCentral.png";
             sans.style.transform = "rotateX(90deg)";
             fondo.style.animationName = "move";
-            fondo.style.animationDuration = "60s";
+            fondo.style.animationDuration = "2000s";
             fondo.style.animationIterationCount = "infinite";
+            if (estrellaDeLaMuerte.style.display == "none") {
+                estrellaDeLaMuerte.style.display = "block";
+            } else {
+                estrellaDeLaMuerte.style.display = "none";
+            }
+            if (saturno.style.display == "none" && tierra.style.display == "none") {
+                saturno.style.display = "block";
+                tierra.style.display = "block";
+            } else {
+                saturno.style.display = "none";
+                tierra.style.display = "none";
+            }
             if (fondo.style.backgroundImage == 'url("img/fondo.png")') {
                 fondo.style.backgroundImage = 'url("img/fondo2.jpg")';
-            }else {
+            } else {
                 fondo.style.backgroundImage = 'url("img/fondo.png")';
             }
+            marchaImperial.play();
         }, 3500);
+
+        setTimeout(() => {
+            halconMilenario.style.animationName = "volar";
+            halconMilenario.style.animationDuration = "6s";
+        }, 4500);
+
+        setTimeout(() => {
+            TIE_Silencer.style.animationName = "volar";
+            TIE_Silencer.style.animationDuration = "6s";
+        }, 5000);
     });
 </script>
 

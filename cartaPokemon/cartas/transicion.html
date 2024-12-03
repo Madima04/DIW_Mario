@@ -1,20 +1,103 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="main.js"></script>
 </head>
+
 <body>
-    <div class="carta charizard">
-        <div class="anverso"></div>
-        <div class="reverso"></div>
-    </div>
-    <div class="carta ferro">
-        <div class="anverso"></div>
-        <div class="reverso"></div>
+    <div class="cartas">
+        <div class="fila1">
+            <div class="carta charizard">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta ferro">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta mew">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta machamp">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+        </div>
+        <div class="fila2">
+            <div class="carta charizard">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta ferro">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta mew">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta machamp">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+        </div>
     </div>
 </body>
+<!-- <div class="carta lucario">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta gyarados">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta brock">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div>
+            <div class="carta tyranitar">
+                <div class="anverso"></div>
+                <div class="reverso"></div>
+            </div> -->
+
 </html>
+
+<script>
+    let pulsaciones = 0;
+    let carta1 = '';
+    let carta2 = '';
+    document.querySelectorAll(".carta").forEach(element => {
+        element.addEventListener('click', function () {
+            if (!element.classList.contains('selecionada')) {
+                element.classList.toggle('selecionada');
+                pulsaciones++;
+                if (pulsaciones == 1) {
+                    carta1 = element.classList[1];
+                }
+                if (pulsaciones == 2) {
+                    carta2 = element.classList[1];
+                    pulsaciones = 0;
+                    if (carta1 != carta2) {
+                        setTimeout(quitarCartasSelecionadas, 1000)
+                    }
+                }
+            }
+        })
+    });
+
+    function quitarCartasSelecionadas() {
+        document.querySelectorAll("." + carta1).forEach(element => {
+            element.classList.remove('selecionada');
+        })
+        document.querySelectorAll("." + carta2).forEach(element => {
+            element.classList.remove('selecionada');
+        })
+    }
+</script>
