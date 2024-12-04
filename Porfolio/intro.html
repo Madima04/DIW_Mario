@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Introducción</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='intro.css'>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">¡Bienvenido a mi Portafolio!</h1>
+        <p class="instructions">Presiona la barra espaciadora para llenar la barra de progreso y acceder al portafolio.</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="hidden" id="completed-message">¡Has completado la carga! Ahora, te redirigiré al portafolio...</p>
+    </div>
+
+    <script>
+        let progressBar = document.getElementById('progress-bar');
+        let completedMessage = document.getElementById('completed-message');
+        let progress = 0;
+
+        function increaseProgress() {
+            if (progress < 100) {
+                progress += 2;
+                progressBar.style.width = progress + '%';
+            }
+            if (progress >= 100) {
+                completedMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    window.location.href = "porfolio_mario_díaz.html";
+                }, 2000);
+            }
+        }
+
+        window.addEventListener('keydown', function(event) {
+            if (event.key === ' ' || event.code === 'Space') {
+                event.preventDefault();
+                increaseProgress();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -35,3 +35,20 @@ article p {
     text-align: justify;
     margin: 20px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #A594F9;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+}
+
+.text-titulo{
+    color: #A594F9;
+}

@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5EFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #E5D9F2;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #A594F9;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #CDC1FF;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #A594F9;
+    border-radius: 5px;
+}
+
+.instructions {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
