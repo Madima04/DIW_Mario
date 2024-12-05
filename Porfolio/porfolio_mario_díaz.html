@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset='utf-8'>
@@ -17,12 +17,12 @@
 
 <body>
     <header class="col col-12 text-center py-4">
-        <h1>Mario Díaz Martínez</h1>
+        <h1 class="text-white">Mario Díaz Martínez</h1>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand text-white" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -56,14 +56,19 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-custom" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <section class="row  py-4">
+    <section class="row py-4">
         <article class="bg-light p-4 mb-4 rounded shadow-sm" style="max-width: 90%; margin: 0 auto;">
+            <div class="row ms-4 mb-4">
+                <div class="col-12">
+                    <h2 class="text-center text-title">Sobre mi</h2>
+                </div>
+            </div>
             <div class="row align-items-center">
                 <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
                     <img src="img/perfil.png" alt="Perfil" class="img-fluid rounded" style="max-width: 150px;">
@@ -86,77 +91,46 @@
         </article>
 
         <article class="bg-light p-4 mb-4 shadow-sm" style="max-width: 90%; margin: 0 auto;">
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-                <div class="w-100 w-md-48 p-3 mb-3 mb-md-0">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="text-center text-title">Proyectos</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 p-3">
                     <div class="p-4 border rounded bg-white shadow-sm">
                         <h4 class="text-primary">🔗 <a href="https://lnkd.in/dddKxwDW"
-                                class="text-decoration-none">Proyecto de TFG</a></h4>
+                                class="text-decoration-none">Proyecto
+                                de TFG</a></h4>
                         <p class="text-muted">🎓 Trabajo Fin de Grado: Comunicación Eficaz entre Entrenadores y Padres a
                             través de una App Móvil</p>
                         <p>Estoy emocionado de compartir el proyecto de mi Trabajo Fin de Grado, una aplicación móvil
                             diseñada para mejorar la comunicación entre entrenadores de fútbol y los padres de los
-                            jugadores, simplificando la gestión de información clave.</p>
-                        <h5>📌 Objetivo del Proyecto:</h5>
-                        <p>La aplicación busca resolver los desafíos en la comunicación que enfrentan equipos de fútbol
-                            base, especialmente en categorías como alevines e infantiles. La app permite que
-                            entrenadores publiquen noticias, gestionen calendarios de entrenamientos y partidos, y los
-                            padres reciban esta información de manera clara y organizada.</p>
+                            jugadores.</p>
                         <h5>🚀 Tecnologías Utilizadas:</h5>
                         <ul>
                             <li><strong>Framework:</strong> Flutter</li>
                             <li><strong>Base de Datos:</strong> Supabase</li>
-                            <li><strong>Lenguaje de Programación:</strong> Dart</li>
+                            <li><strong>Lenguaje:</strong> Dart</li>
                         </ul>
-                        <h5>🔍 Características Clave:</h5>
-                        <ul>
-                            <li><strong>Registro y Autenticación:</strong> Los usuarios pueden registrarse como
-                                entrenadores o padres.</li>
-                            <li><strong>Gestión de Equipos:</strong> Creación de equipos, adición de jugadores y
-                                asignación de eventos.</li>
-                            <li><strong>Calendario Dinámico:</strong> Los eventos se muestran con diferenciación por
-                                colores para mayor claridad.</li>
-                            <li><strong>Interfaz Intuitiva:</strong> Diseño amigable y fácil de usar para asegurar una
-                                buena experiencia de usuario.</li>
-                        </ul>
-                        <h5>📅 Planificación y Desarrollo:</h5>
-                        <p>Implementé una metodología en cascada con retroalimentación, adaptada mediante SCRUM para
-                            sprints eficientes, utilizando Jira para la gestión de tareas y Microsoft To Do para ideas
-                            rápidas.</p>
-                        <h5>💡 Aprendizajes y Futuras Mejoras:</h5>
-                        <p>Este proyecto me ha permitido profundizar en Flutter y en la integración de bases de datos
-                            con Supabase, mejorando mis habilidades en desarrollo full-stack móvil. En el futuro, planeo
-                            expandir las funcionalidades para incluir una versión web y mejorar la seguridad y
-                            usabilidad de la app.</p>
-                        <h5>📑 Resumen Final:</h5>
-                        <p>Este TFG no solo representa un avance en la gestión de equipos de fútbol base, sino que
-                            también es un paso significativo en mi desarrollo como desarrollador de software,
-                            permitiéndome aplicar y expandir mis conocimientos en un entorno práctico.</p>
-                        <p><strong>¡Agradezco a todos los que me apoyaron durante este viaje, especialmente a mi tutor,
-                                David Pérez Lledó, por su orientación! 🎉</strong></p>
                         <div class="d-flex justify-content-center my-3">
-                            <img src="img/golnet.png" alt="Imagen del Proyecto" class="img-fluid rounded"
-                                style="max-width: 100%; height: auto;">
+                            <img src="img/golnet.png" alt="Imagen del Proyecto" class="img-fluid rounded">
                         </div>
+                        <a href="https://lnkd.in/dddKxwDW" class="btn">Ver más detalles</a>
                     </div>
                 </div>
-
-                <div class="w-100 w-md-48 p-3">
+                <div class="col-12 col-md-6 p-3">
                     <div class="p-4 border rounded bg-white shadow-sm">
                         <h4 class="text-primary">🔗 <a href="https://github.com/F1FantasyMulWeb/FantasyF1"
-                                class="text-decoration-none">Proyecto intermodular</a></h4>
+                                class="text-decoration-none">Proyecto Intermodular</a></h4>
                         <p class="text-muted">🚀 Proyecto Fantasy de Fórmula 1 🏎️</p>
                         <p>Estoy muy contento con el resultado de este proyecto, un Fantasy de Fórmula 1 🎮🏁
-                            desarrollado en Flutter 🐦, ya que permite crear aplicaciones móviles multiplataforma con un
-                            único código. Para este proyecto, se utilizó una base de datos 📂 para la autenticación de
-                            usuarios 🔑 y el almacenamiento de datos, además de la API Ergast 🌐 para consultar los
-                            resultados en tiempo real ⏱️ de la Fórmula 1.</p>
-
-                        <p>📄 <strong>Documentación del Proyecto</strong> y 📦 <strong>Código Fuente</strong> están
-                            disponibles para que podáis ver cómo se ha desarrollado.</p>
-
+                            desarrollado en Flutter 🐦.</p>
                         <div class="d-flex justify-content-center my-3">
-                            <img src="img/f1.png" alt="Imagen del Proyecto" class="img-fluid rounded">
+                            <img src="img/f1.png" alt="Imagen d el Proyecto" class="img-fluid rounded">
                         </div>
+                        <a href="https://github.com/F1FantasyMulWeb/FantasyF1" class="btn">Ver más
+                            detalles</a>
                     </div>
                 </div>
             </div>
@@ -210,9 +184,10 @@
         </article>
     </section>
 
-    <footer>
-
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Mario Díaz Martínez</p>
     </footer>
+
 </body>
 
 </html>
