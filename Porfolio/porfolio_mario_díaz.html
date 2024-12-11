@@ -2,27 +2,24 @@
 <html lang="es">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Mario Díaz Martínez</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Scroll</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src='main.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="col col-12 text-center py-4">
+
+    <header id="section1" class="col col-12 text-center py-4">
         <h1 class="text-white">Mario Díaz Martínez</h1>
     </header>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav id="section2" class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--header-background);">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Navbar</a>
+            <a class="navbar-brand text-white" href="#">Mario</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,140 +28,169 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="#">Sobre mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link text-white" href="#">Proyectos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            Educación
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item text-white" href="#">IES Comercio</a></li>
+                            <li><a class="dropdown-item text-white" href="#">IES Cosme Garcia</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" aria-label="Search">
-                    <button class="btn btn-custom" type="submit">Buscar</button>
-                </form>
             </div>
         </div>
     </nav>
 
-    <section class="row py-4">
-        <article class="bg-light p-4 mb-4 rounded shadow-sm" style="max-width: 90%; margin: 0 auto;">
-            <div class="row ms-4 mb-4">
+    <section id="section3" class="section">
+        <div class="content">
+            <div class="row mb-4">
                 <div class="col-12">
                     <h2 class="text-center text-title">Sobre mi</h2>
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
-                    <img src="img/perfil.png" alt="Perfil" class="img-fluid rounded" style="max-width: 150px;">
+                <div class="col-12 col-md-3 text-center mb-4 mb-md-0">
+                    <img src="img/perfil.png" alt="Perfil" class="img-fluid rounded-circle">
                 </div>
                 <div class="col-12 col-md-9">
-                    <p class="mb-0 text-justify">
+                    <p class="text-justify">
                         En la actualidad estoy cursando el doble grado de desarrollo de aplicaciones multiplataforma y
-                        desarrollo
-                        de aplicaciones web (MULWEB), en el IES Comercio, Logroño (La Rioja). Me considero una persona
+                        desarrollo de aplicaciones web (MULWEB), en el IES Comercio, Logroño (La Rioja). Me considero
+                        una persona
                         comprometida con el trabajo, con las inquietudes de los grupos de relaciones externas a mi
                         ocupación
                         habitual (estudiante), realizando colaboraciones con equipos de fútbol, equipo federado de pádel
-                        Rioja,
-                        etc. Mi interés por la informática se desarrolló desde muy temprana edad, en el día de hoy lo
-                        veo como
-                        un mundo al que quiero pertenecer y aportar de forma activa.
+                        Rioja, etc.
+                        Mi interés por la informática se desarrolló desde muy temprana edad, en el día de hoy lo veo
+                        como un mundo al que quiero pertenecer y aportar de forma activa.
                     </p>
                 </div>
             </div>
-        </article>
+        </div>
+    </section>
 
-        <article class="bg-light p-4 mb-4 shadow-sm" style="max-width: 90%; margin: 0 auto;">
-            <div class="row mb-4">
+
+    <section id="section4" class="section">
+        <div class="content">
+            <div class="row ms-4 mb-4">
                 <div class="col-12">
                     <h2 class="text-center text-title">Proyectos</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6 p-3">
-                    <div class="p-4 border rounded bg-white shadow-sm">
-                        <h4 class="text-primary">🔗 <a href="https://lnkd.in/dddKxwDW"
-                                class="text-decoration-none">Proyecto
-                                de TFG</a></h4>
-                        <p class="text-muted">🎓 Trabajo Fin de Grado: Comunicación Eficaz entre Entrenadores y Padres a
-                            través de una App Móvil</p>
-                        <p>Estoy emocionado de compartir el proyecto de mi Trabajo Fin de Grado, una aplicación móvil
-                            diseñada para mejorar la comunicación entre entrenadores de fútbol y los padres de los
-                            jugadores.</p>
-                        <h5>🚀 Tecnologías Utilizadas:</h5>
-                        <ul>
-                            <li><strong>Framework:</strong> Flutter</li>
-                            <li><strong>Base de Datos:</strong> Supabase</li>
-                            <li><strong>Lenguaje:</strong> Dart</li>
-                        </ul>
-                        <div class="d-flex justify-content-center my-3">
-                            <img src="img/golnet.png" alt="Imagen del Proyecto" class="img-fluid rounded">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-5 p-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h4>🔗 <a href="https://lnkd.in/dddKxwDW" class="text-decoration-none">Proyecto de TFG</a>
+                            </h4>
+                            <p class="text-muted">🎓 Trabajo Fin de Grado: Comunicación Eficaz entre Entrenadores y
+                                Padres a través de una App Móvil</p>
+                            <div class="d-flex justify-content-center my-3">
+                                <img src="img/golnet.png" alt="Imagen del Proyecto" class="img-fluid rounded"
+                                    style="max-height: 150px;">
+                            </div>
+                            <a href="https://lnkd.in/dddKxwDW" class="btn">Ver más detalles</a>
                         </div>
-                        <a href="https://lnkd.in/dddKxwDW" class="btn">Ver más detalles</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 p-3">
-                    <div class="p-4 border rounded bg-white shadow-sm">
-                        <h4 class="text-primary">🔗 <a href="https://github.com/F1FantasyMulWeb/FantasyF1"
-                                class="text-decoration-none">Proyecto Intermodular</a></h4>
-                        <p class="text-muted">🚀 Proyecto Fantasy de Fórmula 1 🏎️</p>
-                        <p>Estoy muy contento con el resultado de este proyecto, un Fantasy de Fórmula 1 🎮🏁
-                            desarrollado en Flutter 🐦.</p>
-                        <div class="d-flex justify-content-center my-3">
-                            <img src="img/f1.png" alt="Imagen d el Proyecto" class="img-fluid rounded">
+                <div class="col-12 col-md-6 col-lg-5 p-3">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h4>🔗 <a href="https://github.com/F1FantasyMulWeb/FantasyF1"
+                                    class="text-decoration-none">Proyecto Intermodular</a></h4>
+                            <p class="text-muted">🚀 Proyecto Fantasy de Fórmula 1 🏎️</p>
+                            <div class="d-flex justify-content-center my-3">
+                                <img src="img/f1.png" alt="Imagen del Proyecto" class="img-fluid rounded"
+                                    style="max-height: 150px;">
+                            </div>
+                            <a href="https://github.com/F1FantasyMulWeb/FantasyF1" class="btn">Ver más
+                                detalles</a>
                         </div>
-                        <a href="https://github.com/F1FantasyMulWeb/FantasyF1" class="btn">Ver más
-                            detalles</a>
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
+    </section>
 
-        <article class="bg-light p-4 mb-4 rounded shadow-sm d-flex justify-content-center align-items-center"
-            style="max-width: 90%; margin: 0 auto; height: 400px;">
-            <div id="titulosCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+    <section id="section5" class="section">
+        <div class="content">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="text-center text-title">Educación</h2>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">IES Comercio</h5>
+                            <p class="card-text">
+                                <span class="fw-semibold">Desarrollo de aplicaciones multiplataforma y aplicaciones
+                                    web</span><br>
+                                <span class="text-muted">nov. 2022 - jun. 2025</span>
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-end">
+                            <i class="bi bi-laptop text-secondary" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">IES Cosme Garcia</h5>
+                            <p class="card-text">
+                                <span class="fw-semibold">Bachillerato, Tecnologías/Técnicos de ciencias
+                                    físicas</span><br>
+                                <span class="text-muted">sept. 2020 - jun. 2022</span>
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-end">
+                            <i class="bi bi-book text-secondary" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="titulosCarrusel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000"
                 style="width: 100%;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="text-center">
-                            <h5 class="fw-bold mb-3" style="color: #A594F9;">Mongo DB</h5>
+                            <h5 class="fw-bold mb-3" style="color: black;">Mongo DB</h5>
                             <img src="img/titulos/MongoDB1.jpg" alt="MongoDB Imagen 1"
                                 class="img-fluid rounded shadow-sm" style="max-height: 250px;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="text-center">
-                            <h5 class="fw-bold mb-3" style="color: #A594F9;">Mongo DB</h5>
+                            <h5 class="fw-bold mb-3" style="color: black;">Mongo DB</h5>
                             <img src="img/titulos/MongoDB2.jpg" alt="MongoDB Imagen 2"
                                 class="img-fluid rounded shadow-sm" style="max-height: 250px;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="text-center">
-                            <h5 class="fw-bold mb-3" style="color: #A594F9;">Mongo DB</h5>
+                            <h5 class="fw-bold mb-3" style="color: black;">Mongo DB</h5>
                             <img src="img/titulos/MongoDB3.jpg" alt="MongoDB Imagen 3"
                                 class="img-fluid rounded shadow-sm" style="max-height: 250px;">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="text-center">
-                            <h5 class="fw-bold mb-3" style="color: #A594F9;">Mongo DB</h5>
+                            <h5 class="fw-bold mb-3" style="color: black;">Mongo DB</h5>
                             <img src="img/titulos/MongoDB4.jpg" alt="MongoDB Imagen 4"
                                 class="img-fluid rounded shadow-sm" style="max-height: 250px;">
                         </div>
@@ -181,13 +207,18 @@
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-        </article>
+        </div>
     </section>
 
-    <footer class="text-center py-3">
-        <p>&copy; 2024 Mario Díaz Martínez</p>
-    </footer>
+    <section id="section6" class="section">
+        <div class="content">
+            <h2>Sección 4</h2>
+            <p>¡Has llegado al final de las secciones! Ahora vuelve a la cima.</p>
+            <button>Botón 4</button>
+        </div>
+    </section>
 
 </body>
+<script src="main.js"></script>
 
 </html>
