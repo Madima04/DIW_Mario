@@ -13,6 +13,40 @@
 
 <body>
 
+    <svg width="100vw" height="100vh" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+        <g class="layer">
+            <!-- Polígono con movimiento fluido -->
+            <polygon cx="69.4" cy="152.6" edge="124.21" fill="#a594f9" id="polygon" orient="x"
+                points="384,350 296,478 154,428 154,270 296,222 384,350" shape="regularPoly" sides="5" stroke="#000000"
+                stroke-width="0">
+                <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+                    values="0,0; 300,200; -300,400; 0,600; 300,800; 0,0" />
+            </polygon>
+    
+            <!-- Rectángulo con movimiento fluido -->
+            <rect fill="#a594f9" height="302" id="rectangulo" stroke="#000000" stroke-width="0"
+                transform="matrix(1, 0, 0, 1, 0, 0)">
+                <animateTransform attributeName="transform" type="translate" dur="25s" repeatCount="indefinite"
+                    values="0,0; -200,300; 400,-300; -600,200; 0,0" />
+            </rect>
+    
+            <!-- Triángulo con movimiento fluido -->
+            <path d="m127.59,418.88l96.72,-166.78l96.72,166.78z" fill="#a594f9" id="triangulo" stroke="#000000"
+                stroke-width="0">
+                <animateTransform attributeName="transform" type="translate" dur="22s" repeatCount="indefinite"
+                    values="0,0; 500,100; -400,600; 200,-500; 0,0" />
+            </path>
+    
+            <!-- Símbolo de más con movimiento fluido -->
+            <path
+                d="m586.58,267.98l58.9,0l0,-58.9l60.42,0l0,58.9l58.9,0l0,60.42l-58.9,0l0,58.9l-60.42,0l0,-58.9l-58.9,0z"
+                fill="#a594f9" id="mas" stroke="#000000" stroke-width="0">
+                <animateTransform attributeName="transform" type="translate" dur="18s" repeatCount="indefinite"
+                    values="0,0; 400,200; -500,-100; 300,300; -200,-400; 0,0" />
+            </path>
+        </g>
+    </svg>
+
     <header id="section1" class="col col-12 text-center py-4">
         <h1 class="text-white">Mario Díaz Martínez</h1>
     </header>
@@ -51,6 +85,11 @@
             </div>
         </div>
     </nav>
+
+    
+    
+    
+    
 
     <section id="section3" class="section">
         <div class="content">

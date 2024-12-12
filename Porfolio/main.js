@@ -2,7 +2,7 @@ let currentSection = 0;
 const sections = document.querySelectorAll("section");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
-const allElements = [header, nav, ...sections];
+const allElements = [header, ...sections];
 
 window.addEventListener("wheel", function (event) {
     if (event.deltaY > 0) {
