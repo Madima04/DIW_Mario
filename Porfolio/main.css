@@ -119,6 +119,9 @@ a:hover {
     background-color: var(--primary-color);
 }
 
+#mapaEuropa {
+    position: relative;
+}
 
 #section3 {
     padding: 3rem 0;
@@ -149,6 +152,18 @@ a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+}
+
+#section6 .content {
+    text-align: right;
+}
+
+#section6 .row {
+    justify-content: flex-end;
+}
+
+#Espana,#Francia,#Paisesbajos,#Alemania{
+    fill: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
