@@ -4,7 +4,6 @@ const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 const svg = document.querySelector("svg");
 const allElements = [header, ...sections];
-const svgElements = svg.querySelectorAll("polygon, rect, path, circle");
 
 window.addEventListener("wheel", function (event) {
     if (event.deltaY > 0) {
@@ -21,17 +20,12 @@ window.addEventListener("wheel", function (event) {
 });
 
 function scrollToSection(index) {
-    if (allElements[index] !== svg) {
-        allElements[index].scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
 
-        allElements[index].classList.add("animate");
-        setTimeout(() => {
-            allElements[index].classList.remove("animate");
-        }, 1000);
-    }
+    allElements[index].scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
 
     if (allElements[index].id === "section6") {
         svg.style.display = "none";

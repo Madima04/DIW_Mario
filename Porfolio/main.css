@@ -16,6 +16,22 @@
     --section-border: #C0B5F5;
 }
 
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--header-background);
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--header-background);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 body,
 html {
     margin: 0;
@@ -37,6 +53,13 @@ section {
     transition: transform 1s ease;
     background-color: var(--background-color);
     border-bottom: 5px solid var(--section-border);
+}
+
+.section1 {
+    height: 100vh;
+    background-color: var(--background-color);
+    border-bottom: 5px solid var(--section-border);
+    z-index: 1;
 }
 
 section:nth-child(odd),
@@ -83,14 +106,6 @@ button {
 
 button:hover {
     background-color: var(--btn-hover-color);
-}
-
-header {
-    background-color: var(--header-background);
-    color: var(--header-color);
-    padding: 20px;
-    text-align: center;
-    z-index: 3;
 }
 
 a {
@@ -162,7 +177,10 @@ a:hover {
     justify-content: flex-end;
 }
 
-#Espana,#Francia,#Paisesbajos,#Alemania{
+#Espana,
+#Francia,
+#Paisesbajos,
+#Alemania {
     fill: rgba(0, 0, 0, 0.1);
 }
 
@@ -179,4 +197,30 @@ a:hover {
     #section3 .text-title {
         font-size: 1.5rem;
     }
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 15px;
+}
+
+.text-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
 }

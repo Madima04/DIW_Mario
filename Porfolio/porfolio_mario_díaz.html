@@ -13,7 +13,7 @@
 
 <body>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600">
+    <svg xmlns="http://www.w3.org/2000/svg" id="fondoFormas" width="100%" height="100%" viewBox="0 0 800 600">
         <g class="layer">
             <polygon cx="69.4" cy="152.6" edge="124.21" fill="#a594f9" id="polygon" orient="x"
                 points="384,350 296,478 154,428 154,270 296,222 384,350" shape="regularPoly" sides="5" stroke="#000000"
@@ -65,77 +65,79 @@
         </g>
     </svg>
 
-    <header id="section1" class="col col-12 text-center py-4" style="position: relative;">
-        <h1 class="text-white">Mario Díaz Martínez</h1>
-    </header>
+    <div class="section1">
+        <header class="col col-12 text-center py-4" style="position: relative;">
+            <h1 class="text-white">Mario Díaz Martínez</h1>
+        </header>
 
-    <nav id="section2" class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--header-background);">
-        <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Mario</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Sobre mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Proyectos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Educación
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item text-white" href="#">IES Comercio</a></li>
-                            <li><a class="dropdown-item text-white" href="#">IES Cosme Garcia</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--header-background);">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">Mario</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#section3">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#section4">Proyectos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Educación
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-white" href="#section5">IES Comercio</a></li>
+                                <li><a class="dropdown-item text-white" href="#section5">IES Cosme Garcia</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#section3">Aficiones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="section" style="position: relative;">
+            <div class="content">
+                <div class="row my-4">
+                    <div class="col-12">
+                        <h2 class="text-center text-title">Sobre mi</h2>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3 text-center mb-4 mb-md-0">
+                        <img src="img/perfil.png" alt="Perfil" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <p class="text-justify">
+                            En la actualidad estoy cursando el doble grado de desarrollo de aplicaciones multiplataforma
+                            y
+                            desarrollo de aplicaciones web (MULWEB), en el IES Comercio, Logroño (La Rioja). Me
+                            considero
+                            una persona
+                            comprometida con el trabajo, con las inquietudes de los grupos de relaciones externas a mi
+                            ocupación
+                            habitual (estudiante), realizando colaboraciones con equipos de fútbol, equipo federado de
+                            pádel
+                            Rioja, etc.
+                            Mi interés por la informática se desarrolló desde muy temprana edad, en el día de hoy lo veo
+                            como un mundo al que quiero pertenecer y aportar de forma activa.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-
-
-
-
-
-    <section id="section3" class="section">
-        <div class="content">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="text-center text-title">Sobre mi</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-3 text-center mb-4 mb-md-0">
-                    <img src="img/perfil.png" alt="Perfil" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-12 col-md-9">
-                    <p class="text-justify">
-                        En la actualidad estoy cursando el doble grado de desarrollo de aplicaciones multiplataforma y
-                        desarrollo de aplicaciones web (MULWEB), en el IES Comercio, Logroño (La Rioja). Me considero
-                        una persona
-                        comprometida con el trabajo, con las inquietudes de los grupos de relaciones externas a mi
-                        ocupación
-                        habitual (estudiante), realizando colaboraciones con equipos de fútbol, equipo federado de pádel
-                        Rioja, etc.
-                        Mi interés por la informática se desarrolló desde muy temprana edad, en el día de hoy lo veo
-                        como un mundo al que quiero pertenecer y aportar de forma activa.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 
     <section id="section4" class="section">
@@ -314,7 +316,7 @@
 
                         </g>
                     </svg>
-                    <img src="img/f1.png" >
+                    <img src="img/f1.png">
                 </div>
             </div>
 
