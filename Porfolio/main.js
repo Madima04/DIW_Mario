@@ -5,6 +5,10 @@ const header = document.querySelector("header");
 const svg = document.querySelector("svg");
 const allElements = [header, ...sections];
 
+function scrollToSection(index) {
+    allElements[index].scrollIntoView({ behavior: "smooth" });
+}
+
 window.addEventListener("wheel", function (event) {
     if (event.deltaY > 0) {
         if (currentSection < allElements.length - 1) {
@@ -18,6 +22,7 @@ window.addEventListener("wheel", function (event) {
         }
     }
 });
+
 
 function scrollToSection(index) {
 
@@ -34,12 +39,12 @@ function scrollToSection(index) {
     }
 }
 
-let paises = document.querySelectorAll("polygon");
-paises.forEach(pais => {
-    pais.addEventListener("click", () => {
-        pais.style.fill = "#E5D9F2";
-        pais.style.fillOpacity = "1";
-        pais.style.strokeWidth = "0.5";
+document.querySelectorAll(".carta").forEach(element => {
+    element.addEventListener('click', function () {
+        document.querySelectorAll(".carta").forEach(carta => {
+            carta.classList.remove('selecionada');
+        });
+
+        element.classList.add('selecionada');
     });
 });
-

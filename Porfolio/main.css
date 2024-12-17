@@ -219,8 +219,87 @@ p {
     text-align: justify;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+.carta {
+    position: absolute;
+    left: 85vw;
+    top: 370vh;
+    border-radius: 15px;
+    overflow: hidden;
+    width: var(--card-width, 10vw);
+    height: calc(var(--card-width, 15vh) * 1.4);
+    perspective: 1000px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 1; /* Se establece el z-index bajo por defecto */
+}
+
+.carta > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.espana .reverso {
+    background: url('img/viajes/espana.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.espana .anverso {
+    background: url('img/viajes/espanaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.grecia .reverso {
+    background: url('img/viajes/grecia.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.grecia .anverso {
+    background: url('img/viajes/greciaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.malta .reverso {
+    background: url('img/viajes/malta.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.malta .anverso {
+    background: url('img/viajes/maltaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.carta.selecionada .anverso {
+    transform: rotateY(180deg);
+}
+
+.carta.selecionada .reverso {
+    transform: rotateY(0deg);
+}
+
+.carta.selecionada {
+    width: 70vw;
+    height: 90vh;
+    top: 305vh;
+    left: 5vw;
+    z-index: 10;
+}
+
+.carta.deseleccionada {
+    z-index: 0;
+    transform: rotateY(0deg);
 }
