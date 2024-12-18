@@ -39,12 +39,29 @@ function scrollToSection(index) {
     }
 }
 
-document.querySelectorAll(".carta").forEach(element => {
-    element.addEventListener('click', function () {
-        document.querySelectorAll(".carta").forEach(carta => {
-            carta.classList.remove('selecionada');
-        });
+let cartas = Array.from(document.querySelectorAll(".carta"));
 
-        element.classList.add('selecionada');
+function actualizarZIndex() {
+    cartas.forEach((carta, index) => {
+        carta.style.zIndex = cartas.length - index;
     });
-});
+}
+
+function seleccionarCarta(event) {
+    const cartaSeleccionada = event.currentTarget;
+    cartas = cartas.filter(carta => carta !== cartaSeleccionada);
+    cartas.push(cartaSeleccionada);
+    cartas.forEach(c => c.classList.remove('selecionada'));
+    cartaSeleccionada.classList.add('selecionada');
+    actualizarZIndex();
+}
+
+function iniciar() {
+    cartas.forEach(carta => {
+        carta.addEventListener('click', seleccionarCarta);
+    });
+
+    actualizarZIndex();
+}
+
+iniciar();

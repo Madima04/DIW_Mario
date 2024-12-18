@@ -283,6 +283,45 @@ p {
     background-position: center;
 }
 
+.francia .reverso {
+    background: url('img/viajes/franciaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.francia .anverso {
+    background: url('img/viajes/franciaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.alemania .reverso {
+    background: url('img/viajes/alemaniaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.alemania .anverso {
+    background: url('img/viajes/alemaniaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.paisesBajos .reverso {
+    background: url('img/viajes/paisesBajos.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.paisesBajos .anverso {
+    background: url('img/viajes/paisesBajos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .carta.selecionada .anverso {
     transform: rotateY(180deg);
 }
