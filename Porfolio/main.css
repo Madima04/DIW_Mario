@@ -223,17 +223,19 @@ p {
     position: absolute;
     left: 85vw;
     top: 370vh;
-    border-radius: 15px;
-    overflow: hidden;
     width: var(--card-width, 10vw);
     height: calc(var(--card-width, 15vh) * 1.4);
     perspective: 1000px;
     cursor: pointer;
     transition: all 1s ease-in-out;
-    z-index: 1; /* Se establece el z-index bajo por defecto */
+    z-index: 1;
 }
 
-.carta > div {
+.reverso .anverso {
+    overflow: hidden;
+}
+
+.carta>div {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -249,12 +251,14 @@ p {
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .espana .anverso {
     background: url('img/viajes/espanaBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
 }
 
 .grecia .reverso {
@@ -262,12 +266,14 @@ p {
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .grecia .anverso {
     background: url('img/viajes/greciaBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
 }
 
 .malta .reverso {
@@ -275,38 +281,44 @@ p {
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .malta .anverso {
     background: url('img/viajes/maltaBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
 }
 
 .francia .reverso {
-    background: url('img/viajes/franciaBandera.jpg');
+    background: url('img/viajes/francia.jpg');
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .francia .anverso {
     background: url('img/viajes/franciaBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
 }
 
 .alemania .reverso {
-    background: url('img/viajes/alemaniaBandera.jpg');
+    background: url('img/viajes/alemania.jpg');
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .alemania .anverso {
     background: url('img/viajes/alemaniaBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
 }
 
 .paisesBajos .reverso {
@@ -314,12 +326,59 @@ p {
     background-size: cover;
     background-position: center;
     transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .paisesBajos .anverso {
-    background: url('img/viajes/paisesBajos.jpg');
+    background: url('img/viajes/paisesBajosBandera.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 15px;
+}
+
+.chequia .reverso {
+    background: url('img/viajes/chequia.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+}
+
+.chequia .anverso {
+    background: url('img/viajes/chequiaBandera.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.austria .reverso {
+    background: url('img/viajes/austria.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+}
+
+.austria .anverso {
+    background: url('img/viajes/austriaBandera.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.italia .reverso {
+    background: url('img/viajes/italia.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+}
+
+.italia .anverso {
+    background: url('img/viajes/italiaBandera.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
 }
 
 .carta.selecionada .anverso {
@@ -341,4 +400,59 @@ p {
 .carta.deseleccionada {
     z-index: 0;
     transform: rotateY(0deg);
+}
+
+.contenidoCarta {
+    position: relative;
+
+    top: 75%;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    height: 25%;
+    opacity: 0.5;
+}
+
+.espana .reverso .contenidoCarta {
+    background-image: url(img/viajes/espanaBandera.jpg);
+    background-size: contain;
+}
+
+.grecia .reverso .contenidoCarta {
+    background-image: url(img/viajes/greciaBandera.jpg);
+    background-size: contain;
+}
+
+.malta .reverso .contenidoCarta {
+    background-image: url(img/viajes/maltaBandera.jpg);
+    background-size: contain;
+}
+
+.francia .reverso .contenidoCarta {
+    background-image: url(img/viajes/franciaBandera.jpg);
+    background-size: contain;
+}
+
+.alemania .reverso .contenidoCarta {
+    background-image: url(img/viajes/alemaniaBandera.jpg);
+    background-size: contain;
+}
+
+.paisesBajos .reverso .contenidoCarta {
+    background-image: url(img/viajes/paisesBajosBandera.jpg);
+    background-size: contain;
+}
+
+.chequia .reverso .contenidoCarta {
+    background-image: url(img/viajes/chequiaBandera.jpg);
+    background-size: contain;
+}
+
+.austria .reverso .contenidoCarta {
+    background-image: url(img/viajes/chequiaBandera.jpg);
+    background-size: contain;
+}
+
+.italia .reverso .contenidoCarta {
+    background-image: url(img/viajes/italiaBandera.png);
+    background-size: contain;
 }
