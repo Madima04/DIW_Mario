@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .cartas {
@@ -96,3 +97,18 @@ body {
 .carta.selecionada div {
     transform: rotateY(180deg);
 }
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+button#reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+

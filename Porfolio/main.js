@@ -65,3 +65,20 @@ function iniciar() {
 }
 
 iniciar();
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const tfgImage = document.getElementById("tfgImage");
+    const tfgLink = document.getElementById("tfgLink");
+
+    tfgImage.addEventListener("click", function() {
+        window.location.href = tfgLink.href;
+    });
+
+    const f1Image = document.getElementById("f1Image");
+    const f1Link = document.getElementById("f1Link");
+
+    f1Image.addEventListener("click", function() {
+        window.location.href = f1Link.href;
+    });
+});

@@ -16,6 +16,10 @@
     --section-border: #C0B5F5;
 }
 
+body {
+    overflow: hidden;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -224,21 +228,6 @@ button {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-}
-
-#section6 .content {
-    text-align: right;
-}
-
-#section6 .row {
-    justify-content: flex-end;
-}
-
-#Espana,
-#Francia,
-#Paisesbajos,
-#Alemania {
-    fill: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -512,4 +501,168 @@ p {
 .italia .reverso .contenidoCarta {
     background-image: url(img/viajes/italiaBandera.png);
     background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .carta {
+        width: 90vw;
+        height: 20vh;
+        top: 375vh;
+        left: 7vw;
+    }
+
+    .carta.selecionada .reverso {
+        width: 90vw;
+        height: 60vh;
+        top: 5vh;
+        left: 2.5vw;
+    }
+}
+
+
+.img-perfil {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .section .row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .section img {
+        max-width: 150px;
+    }
+
+    .section .text-title {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+    }
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--card-background);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body h4 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.card-body img {
+    width: 80%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+@media (max-width: 768px) {
+
+    .col-12.col-md-6 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .card-body img {
+        max-height: 120px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .col-md-6.col-lg-5 {
+        max-width: 45%;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .card-body p,
+    .card-body h4,
+    .card-body a {
+        display: none;
+    }
+
+    .card-body img {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .card-body img:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (min-width: 769px) {
+
+    .card-body p,
+    .card-body h4,
+    .card-body a {
+        display: block;
+    }
+
+    .card-body img {
+        cursor: default;
+    }
 }
